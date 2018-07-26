@@ -151,7 +151,7 @@ class Battle extends React.Component {
 
               {playerTwoName &&
                 <PlayerPreview
-                  username={playerTwoName} platform={playerOnePlatform}>
+                  username={playerTwoName} platform={playerTwoPlatform}>
                     <button
                       className='btn btn-primary mb-2'
                       onClick={this.handleReset.bind(this, 'playerTwo')}>
@@ -164,8 +164,7 @@ class Battle extends React.Component {
               <Link
                 className='btn btn-primary mb-2'
                 to={{
-                  pathname: match.url + '/results',
-                  search: '/' + playerOneName + '/' + playerOnePlatform + '/' + playerTwoName + '/' + playerTwoPlatform
+                  pathname: match.url + '/results' + '/' + playerOneName + '/' + playerOnePlatform + '/' + playerTwoName + '/' + playerTwoPlatform
                 }}>
                   Battle
               </Link>}
